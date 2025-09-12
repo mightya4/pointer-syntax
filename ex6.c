@@ -16,6 +16,7 @@
 // TODO: Create a function named `make_array` which accepts a single `int`
 // representing the size of the requested array and returns a pointer to
 // the dynamically allocated array.
+int *make_array(int x);
 
 int main() {
     // TODO: Call the allocation function.
@@ -26,6 +27,19 @@ int main() {
     }
 
     // TODO: Don't forget to free the memory.
-
+    free(arr);
+    
     return 0;
+}
+
+int *make_array(int x) {
+    int *ptr = NULL;
+    ptr = (int *)calloc(x, sizeof(int));
+
+    //If array memory allocation failed
+    if(ptr == NULL) {
+        return NULL;
+    }
+
+    return ptr;
 }

@@ -22,6 +22,7 @@
  * Returns:
  *      int *address - The address of the element in the given array `arr`.
  */
+int get_address(int *arr, int len, int val);
 
 int main() {
     int arr[10] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 0 };
@@ -30,4 +31,13 @@ int main() {
     // TODO: Print the value you searched for along with its address
 
     return 0;
+}
+
+int get_address(int *arr, int len, int val) {
+
+    int arr_elem_add;
+
+
+    //return address of element
+    return arr_elem_add;
 }
