@@ -11,9 +11,9 @@
 #include <stdlib.h>
 
 // TODO: Modify this function as requested.
-void alloc_value(int *p, int val) {
+void *alloc_value(int *p, int val) {
     p = calloc(1, sizeof(int));
-    *p = val;
+    p = &val;
 }
 
 int main() {
