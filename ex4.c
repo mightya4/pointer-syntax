@@ -57,11 +57,8 @@ int get_address(int *arr, int len, int val) {
         return 1;
     }
     for(int i = 0; i < len; i++) {
-        printf("Outside of goal value: %d, at index %d\n", arr[i], i);
         if(val == arr[i]) {
-            printf("Meets goals inside goal value: %d, at index %d\n", arr[i], i);
             address = &arr[i];
-            printf("The value: %d is at address: %p\n", val, address);
             break;
         }
     }

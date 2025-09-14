@@ -11,9 +11,9 @@
 #include <stdlib.h>
 
 // TODO: Modify this function as requested.
-void *alloc_value(int *p, int val) {
+void alloc_value(int *p, int val) {
     p = calloc(1, sizeof(int));
-    p = &val;
+    *p = val;
 }
 
 int main() {
@@ -23,7 +23,11 @@ int main() {
     // TODO: The call needs to be modified to match the new definition.
     alloc_value(p, 10);
 
+    if(p == NULL){
+        return 1;
+    }
     printf("Value = %d\n", *p);
 
+    free(p);
     return 0;
 }
